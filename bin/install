@@ -1,16 +1,21 @@
 #!/bin/bash
 
+# sudo apt update
+# sudo apt upgrade
+
 # Possible not decided yet
 
 # Flameshot
 
 # ------------------------- Install And Configure Terminal Tools ------------------------ #
 
-# Install An Configure Latest Git version
+# Install And Configure Latest Git version
 
 # git config --global core.editor "vim"
 
 # Install Zsh
+
+# source "install/terminal/zsh.sh"
 
 # Configure Zsh (install and config plugins zsh-autosuggestions zsh-syntax-highlighting)
 
@@ -31,6 +36,8 @@
 # echo "code code/add-microsoft-repo boolean true" | sudo debconf-set-selections
 
 # Install Windsurf Editor
+
+source "install/desktop/windsurf.sh"
 
 # Install Zed Editor
 
