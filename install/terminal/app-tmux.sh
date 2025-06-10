@@ -1,8 +1,6 @@
 #!/bin/bash
 
 # Import utility functions
-source "../../bin/utils/get-timestamp.sh"
-source "../../bin/utils/create-backup.sh" 
 source "../../bin/utils/colors.sh"
 source "../../bin/utils/error-report.sh"
 

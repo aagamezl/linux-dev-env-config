@@ -1,3 +1,5 @@
+#!/bin/bash
+
 set -e
 
 echo -e "\nBegin installation (or abort with ctrl+c)..."
