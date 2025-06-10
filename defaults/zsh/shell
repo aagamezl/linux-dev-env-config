@@ -1,0 +1,5 @@
+# Set complete path
+export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/quiirus/bin:$PATH"
+set +h
+
+export quiirus_PATH="/home/$USER/.local/share/quiirus"
