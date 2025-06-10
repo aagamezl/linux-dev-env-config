@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Import utility functions
-source "../../bin/utils/colors.sh"
+source "./bin/utils/colors.sh"
 
 echo -e "${YELLOW}Uninstalling old Docker packages...${NC}"
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done

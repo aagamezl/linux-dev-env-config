@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Import utility functions
-source "../../bin/utils/colors.sh"
-source "../../bin/utils/error-report.sh"
+source "./bin/utils/colors.sh"
 
 echo -e "${YELLOW}Installing Zsh...${NC}"
 sudo apt install -y zsh

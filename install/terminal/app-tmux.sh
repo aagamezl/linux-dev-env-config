@@ -1,11 +1,10 @@
 #!/bin/bash
 
 # Import utility functions
-source "../../bin/utils/colors.sh"
-source "../../bin/utils/error-report.sh"
+source "./bin/utils/colors.sh"
 
 echo -e "${YELLOW}Installing tmux...${NC}"
-sudo apt install -y tmux || error_exit "Failed to install tmux"
+sudo apt install -y tmux
     
 create_backup "$HOME/.tmux.conf"
 

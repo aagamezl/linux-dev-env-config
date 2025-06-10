@@ -1,5 +1,5 @@
 # Import utility functions
-source "../../bin/utils/colors.sh"
+source "./bin/utils/colors.sh"
 
 echo -e "${YELLOW}Installing VS Code...${NC}"
 

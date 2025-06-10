@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Import utility functions
-source "../../bin/utils/colors.sh"
+source "./bin/utils/colors.sh"
 
-echo -e "${YELLOW}Installing LazyDocker...${NC}"
+echo -e "${YELLOW}Installing Lazydocker...${NC}"
 
 cd /tmp
 LAZYDOCKER_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazydocker/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
@@ -13,4 +13,4 @@ sudo install lazydocker /usr/local/bin
 rm lazydocker.tar.gz lazydocker
 cd -
 
-echo -e "${GREEN}LazyDocker installed successfully!${NC}" 
+echo -e "${GREEN}Lazydocker installed successfully!${NC}" 

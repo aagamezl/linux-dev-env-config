@@ -1,6 +1,6 @@
 
 # Import utility functions
-source "../utils/get-timestamp.sh"
+source "./get-timestamp.sh"
 
 # Create backup of a file with timestamp
 create_backup() {

@@ -1,6 +1,5 @@
 # Import utility functions
-source "../../bin/utils/colors.sh"
-source "../../bin/utils/error-report.sh"
+source "./bin/utils/colors.sh"
 
 echo -e "${YELLOW}Installing Brave Browser...${NC}"
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg

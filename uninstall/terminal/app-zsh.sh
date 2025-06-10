@@ -15,25 +15,26 @@ if [ -d "$HOME/.oh-my-zsh" ]; then
 fi
 
 # Remove Powerlevel10k
-if [ -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" ]; then
-    rm -rf "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
-fi
+# if [ -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" ]; then
+#     rm -rf "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+# fi
 
 # Remove Zsh plugins
-if [ -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]; then
-    rm -rf "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
-fi
-if [ -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]; then
-    rm -rf "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
-fi
+# if [ -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]; then
+#     rm -rf "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
+# fi
+# if [ -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]; then
+#     rm -rf "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
+# fi
 
 # Restore backed up .zshrc
 create_backup "$HOME/.zshrc"
 latest_backup=$(ls -t "$HOME/.zshrc"-* 2>/dev/null | head -n 1)
+
 if [ -n "$latest_backup" ]; then
-    echo -e "${YELLOW}Restoring .zshrc from backup...${NC}"
-    cp "$latest_backup" "$HOME/.zshrc"
-    rm "$latest_backup"
+  echo -e "${YELLOW}Restoring .zshrc from backup...${NC}"
+  cp "$latest_backup" "$HOME/.zshrc"
+  rm "$latest_backup"
 fi
 
 echo -e "${GREEN}Zsh and related tools uninstalled successfully!${NC}"

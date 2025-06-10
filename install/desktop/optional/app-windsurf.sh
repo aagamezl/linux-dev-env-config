@@ -1,6 +1,5 @@
 # Import utility functions
-source "../../bin/utils/colors.sh"
-source "../../bin/utils/error-report.sh"
+source "./bin/utils/colors.sh"
 
 echo -e "${YELLOW}Installing Windsurf...${NC}"
 curl -fsSL "https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/windsurf.gpg" | sudo gpg --dearmor -o /usr/share/keyrings/windsurf-stable-archive-keyring.gpg
