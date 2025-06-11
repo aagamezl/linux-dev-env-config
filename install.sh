@@ -32,6 +32,8 @@ source "install/terminal/app-tmux.sh" || error_exit "Failed to install tmux"
 echo -e "${YELLOW}Installing Desktop Tools...${NC}"
 source "install/desktop/app-brave.sh" || error_exit "Failed to install Brave"
 source "install/desktop/app-vscode.sh" || error_exit "Failed to install Visual Studio Code"
+source "install/desktop/optional/app-windsurf.sh" || error_exit "Failed to install Windsurf"
+source "install/desktop/optional/app-zed.sh" || error_exit "Failed to install Zed"
 
 # Install Development Tools
 echo -e "${YELLOW}Installing Development Tools...${NC}"
@@ -42,7 +44,11 @@ source "install/terminal/app-lazygit.sh" || error_exit "Failed to install Lazygi
 source "install/terminal/app-lazydocker.sh" || error_exit "Failed to install Lazydocker"
 
 # Fix GNOME keybindings
-source "defaults/fix-gnome-keybindings.sh" || error_exit "Failed to fix GNOME keybindings"
+source "install/desktop/fix-gnome-keybindings.sh" || error_exit "Failed to fix GNOME keybindings"
+
+# Set GNOME settings
+source "install/desktop/set-gnome-settings.sh" || error_exit "Failed to set GNOME settings"
+
 
 # Fix VS Code keybindings
 source "defaults/vscode/fix-keybindings.sh" || error_exit "Failed to fix VS Code keybindings"
